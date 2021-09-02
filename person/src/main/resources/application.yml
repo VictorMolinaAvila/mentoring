@@ -1,0 +1,25 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: person
+  main:
+    allow-bean-definition-overriding: true
+  jpa:
+    open-in-view: false
+    hibernate:
+      show-sql: true
+      use-sql-comments: false
+      format-sql: true
+      dialect: org.hibernate.dialect.H2Dialect
+      jdbc:
+        time_zone: UTC
+        lob:
+          non-contextual-creation: true
+      ddl-auto: update
+      generate-statistics: false
+      temp:
+        use_jdbc_metadata_defaults: false
